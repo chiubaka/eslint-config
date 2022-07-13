@@ -1,0 +1,93 @@
+{
+  "name": "@chiubaka/eslint-config",
+  "version": "0.0.1",
+  "description": "ESLint configs and plugins for the Chiubaka Technologies ecosystem.",
+  "scripts": {
+    "build": "",
+    "deploy": "",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.yml,.yaml,.json .",
+    "lint:fix": "yarn run lint --fix",
+    "lint:staged": "lint-staged",
+    "prepare": "husky install",
+    "test": "jest",
+    "test:ci": "yarn run test --ci --runInBand --coverage --reporters=default --reporters=jest-junit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiubaka/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "chiubaka"
+  ],
+  "author": "Daniel Chiu <daniel@chiubaka.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/chiubaka/eslint-config/issues"
+  },
+  "homepage": "https://github.com/chiubaka/eslint-config#readme",
+  "devDependencies": {
+    "@chiubaka/tsconfig": "0.0.3",
+    "@types/jest": "28.1.5",
+    "@types/node": "18.0.3",
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/parser": "5.30.6",
+    "eslint": "8.19.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-jest": "26.5.3",
+    "eslint-plugin-jest-formatting": "3.1.0",
+    "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-package-json": "0.1.4",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-security": "1.5.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-unicorn": "43.0.1",
+    "eslint-plugin-yml": "1.0.0",
+    "husky": "8.0.1",
+    "jest": "28.1.3",
+    "jest-junit": "14.0.0",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "ts-jest": "28.0.5",
+    "ts-node": "10.8.2",
+    "typescript": "4.7.4",
+    "yaml-eslint-parser": "1.0.1"
+  },
+  "devDependenciesComments": {
+    "@chiubaka/tsconfig": "Shared TSConfig settings for the Chiubaka Technologies ecosystem",
+    "@types/jest": "Types for jest",
+    "@types/node": "Types for NodeJS. Peer dependency of ts-node.",
+    "@typescript-eslint/eslint-plugin": "TypeScript support for ESLint",
+    "@typescript-eslint/parser": "Typescript support for ESLint",
+    "eslint": "Linting and code quality checks",
+    "eslint-config-prettier": "Peer dependency of eslint-plugin-prettier to disable all formatting-related ESLint rules",
+    "eslint-plugin-eslint-comments": "ESLint plugin for enforcing best practices around eslint-comments",
+    "eslint-plugin-jest": "ESLint plugin for Jest best practices",
+    "eslint-plugin-jest-formatting": "ESLint plugin for Jest formatting",
+    "eslint-plugin-json": "ESLint plugin for JSON validation",
+    "eslint-plugin-package-json": "ESLint plugin for linting package.json files",
+    "eslint-plugin-prettier": "ESLint plugin for compatibility with Prettier",
+    "eslint-plugin-promise": "ESLint plugin for best practices with promise",
+    "eslint-plugin-security": "ESLint plugin for security best practices",
+    "eslint-plugin-simple-import-sort": "ESLint plugin for sorting and organizing imports",
+    "eslint-plugin-unicorn": "ESLint plugin with an amalgamation of best practices for JS",
+    "eslint-plugin-yml": "ESLint plugin for linting YAML files",
+    "husky": "Modern native Git hooks made easy",
+    "jest": "Test runner from Meta",
+    "jest-junit": "JUnit report formatter for Jest for compatibility with CircleCI test results format",
+    "lint-staged": "Linting of just staged files",
+    "prettier": "Code formatting for consistent style",
+    "ts-jest": "TypeScript preprocessor with source map support for Jest",
+    "ts-node": "To enable TypeScript configuration files for Jest",
+    "typescript": "TypeScript support for this project",
+    "yaml-eslint-parser": "Peer dependency of eslint-plugin-yml. ESLint parser for YAML files."
+  },
+  "jest-junit": {
+    "addFileAttribute": true,
+    "classNameTemplate": "{suitename}",
+    "outputDirectory": "reports/junit"
+  }
+}
