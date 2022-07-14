@@ -1,6 +1,6 @@
-import { EsLintConfig } from "./types";
+import { Linter } from "eslint";
 
-const config: EsLintConfig = {
+const config: Linter.Config = {
   env: {
     browser: true,
     es2021: true,

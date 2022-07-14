@@ -31,6 +31,7 @@
   "homepage": "https://github.com/chiubaka/eslint-config#readme",
   "devDependencies": {
     "@chiubaka/tsconfig": "0.0.3",
+    "@types/eslint": "^8.4.5",
     "@types/jest": "28.1.5",
     "@types/node": "18.0.3",
     "@typescript-eslint/eslint-plugin": "5.30.6",
@@ -61,6 +62,7 @@
   },
   "devDependenciesComments": {
     "@chiubaka/tsconfig": "Shared TSConfig settings for the Chiubaka Technologies ecosystem",
+    "@types/eslint": "Types for ESLint",
     "@types/jest": "Types for jest",
     "@types/node": "Types for NodeJS. Peer dependency of ts-node.",
     "@typescript-eslint/eslint-plugin": "TypeScript support for ESLint",
