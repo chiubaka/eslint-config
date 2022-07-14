@@ -8,7 +8,8 @@ extends:
   - plugin:security/recommended
   - plugin:unicorn/recommended
 ignorePatterns:
-  - reports
+  - dist
+  - test/examples
 overrides:
   - files:
       - "*.ts"
@@ -48,6 +49,12 @@ overrides:
       - plugin:jest/recommended
       - plugin:jest/style
       - plugin:jest-formatting/strict
+    rules:
+      jest/expect-expect:
+        - error
+        - assertFunctionNames:
+            - expect
+            - "*.assert*"
   - files:
       - "*.yaml"
       - "*.yml"
@@ -61,7 +68,6 @@ overrides:
       - json
     rules:
       json/json: error
-      unicorn/prefer-module: off
   - files:
       - tsconfig.json
     rules:
@@ -92,11 +98,6 @@ plugins:
   - simple-import-sort
   - unicorn
 rules:
-  jest/expect-expect:
-    - error
-    - assertFunctionNames:
-        - expect
-        - "*.assert*"
   no-console:
     - error
     - allow:
@@ -125,6 +126,7 @@ rules:
     - cases:
         camelCase: true
         pascalCase: true
+  unicorn/prefer-module: off
   unicorn/prevent-abbreviations:
     - error
     - replacements:

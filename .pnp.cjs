@@ -56,6 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-junit", "npm:14.0.0"],\
             ["lint-staged", "npm:13.0.3"],\
             ["prettier", "npm:2.7.1"],\
+            ["rimraf", "npm:3.0.2"],\
             ["ts-jest", "virtual:9496cdff7cc5f455f1855474a12aa73b40307af5b76c6d716491da1bf8d46dfca7d98d89bef17a5cbc86feffaa980169ce34b04c8d06aa2069be120337dc7dbb#npm:28.0.5"],\
             ["ts-node", "virtual:9496cdff7cc5f455f1855474a12aa73b40307af5b76c6d716491da1bf8d46dfca7d98d89bef17a5cbc86feffaa980169ce34b04c8d06aa2069be120337dc7dbb#npm:10.8.2"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"],\
@@ -840,6 +841,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-junit", "npm:14.0.0"],\
             ["lint-staged", "npm:13.0.3"],\
             ["prettier", "npm:2.7.1"],\
+            ["rimraf", "npm:3.0.2"],\
             ["ts-jest", "virtual:9496cdff7cc5f455f1855474a12aa73b40307af5b76c6d716491da1bf8d46dfca7d98d89bef17a5cbc86feffaa980169ce34b04c8d06aa2069be120337dc7dbb#npm:28.0.5"],\
             ["ts-node", "virtual:9496cdff7cc5f455f1855474a12aa73b40307af5b76c6d716491da1bf8d46dfca7d98d89bef17a5cbc86feffaa980169ce34b04c8d06aa2069be120337dc7dbb#npm:10.8.2"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"],\

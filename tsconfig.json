@@ -1,3 +1,8 @@
 {
-  "extends": "@chiubaka/tsconfig/tsconfig.json"
+  "extends": "@chiubaka/tsconfig/tsconfig.json",
+
+  "compilerOptions": {
+    "outDir": "./dist"
+  },
+  "include": ["src", "src/.eslintrc.ts"]
 }

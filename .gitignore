@@ -1,3 +1,6 @@
+# Built files for distribution
+dist
+
 # Environment Variables -- May Contain Secrets
 .env
 
