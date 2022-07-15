@@ -394,6 +394,7 @@ __metadata:
   resolution: "@chiubaka/eslint-config@workspace:."
   dependencies:
     "@chiubaka/tsconfig": 0.0.3
+    "@rushstack/eslint-patch": ^1.1.4
     "@types/eslint": ^8.4.5
     "@types/jest": 28.1.5
     "@types/node": 18.0.3
@@ -842,6 +843,13 @@ __metadata:
     mkdirp: ^1.0.4
     rimraf: ^3.0.2
   checksum: 1388777b507b0c592d53f41b9d182e1a8de7763bc625fc07999b8edbc22325f074e5b3ec90af79c89d6987fdb2325bc66d59f483258543c14a43661621f841b0
+  languageName: node
+  linkType: hard
+
+"@rushstack/eslint-patch@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "@rushstack/eslint-patch@npm:1.1.4"
+  checksum: 597bc84e2f76c7f5f2bcedd4c4b1dd5d02524167a0f67ac588e8fbbd94666297aaf0e6a53ec46afb95554164fc1169ff782841003280e4bc98e80ab6559412c6
   languageName: node
   linkType: hard
 

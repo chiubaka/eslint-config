@@ -95,5 +95,11 @@
     "addFileAttribute": true,
     "classNameTemplate": "{suitename}",
     "outputDirectory": "reports/junit"
+  },
+  "dependencies": {
+    "@rushstack/eslint-patch": "^1.1.4"
+  },
+  "dependenciesComments": {
+    "@rushstack/eslint-patch": "To avoid needing consumers of this package to install all dependencies as peer dependencies"
   }
 }
