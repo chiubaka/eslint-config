@@ -1,3 +1,6 @@
+# Built files for distribution
+dist
+
 # Environment Variables -- May Contain Secrets
 .env
 
@@ -21,6 +24,7 @@
 *.vsix
 
 # yarn
+node_modules
 .yarn/*
 !.yarn/cache
 !.yarn/patches
