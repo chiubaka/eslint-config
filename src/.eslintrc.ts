@@ -45,6 +45,44 @@ const config: Linter.Config = {
         "@typescript-eslint/unbound-method": ["error", { ignoreStatic: true }],
       },
     },
+    {
+      files: ["*.yaml", "*.yml"],
+      parser: "yaml-eslint-parser",
+      extends: ["plugin:yml/standard", "plugin:yml/prettier"],
+    },
+    {
+      files: ["*.json"],
+      plugins: ["json"],
+      rules: {
+        "json/json": "error",
+      },
+    },
+    {
+      files: ["tsconfig.json"],
+      rules: {
+        "json/json": ["error", { allowComments: true }],
+      },
+    },
+    {
+      files: ["package.json"],
+      plugins: ["package-json"],
+      extends: ["plugin:package-json/recommended"],
+      rules: {
+        "prettier/prettier": "off",
+        "package-json/sort-collections": [
+          "error",
+          [
+            "config",
+            "dependencies",
+            "dependenciesComments",
+            "devDependencies",
+            "peerDependencies",
+            "peerDependenciesComments",
+            "scripts",
+          ],
+        ],
+      },
+    },
   ],
   plugins: ["prettier", "promise", "simple-import-sort", "unicorn"],
   rules: {
@@ -52,6 +90,45 @@ const config: Linter.Config = {
       "error",
       {
         allow: ["warn", "error"],
+      },
+    ],
+    "promise/catch-or-return": [
+      "error",
+      { terminationMethod: ["catch", "finally"] },
+    ],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        // See https://github.com/lydell/eslint-plugin-simple-import-sort/#custom-grouping
+        groups: [
+          // Side effect imports (the plugin inserts '\\u0000' for us to match).
+          ["^\\u0000"],
+          // Packages. (Things that start with a letter (or digit or underscore), or `@` followed by a letter.)
+          ["^@?\\w"],
+          // Relative imports.
+          ["^\\."],
+          // Catch everything not covered by other rules
+          ["^"],
+        ],
+      },
+    ],
+    "unicorn/filename-case": [
+      "error",
+      { cases: { camelCase: true, pascalCase: true } },
+    ],
+    "unicorn/prefer-module": "off",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        replacements: {
+          args: {
+            arguments: false,
+          },
+          dev: {
+            development: false,
+          },
+        },
       },
     ],
   },
