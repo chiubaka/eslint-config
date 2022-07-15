@@ -47,7 +47,14 @@ const config: Linter.Config = {
     },
   ],
   plugins: ["prettier", "promise", "simple-import-sort", "unicorn"],
-  rules: {},
+  rules: {
+    "no-console": [
+      "error",
+      {
+        allow: ["warn", "error"],
+      },
+    ],
+  },
 };
 
 export = config;

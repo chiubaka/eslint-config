@@ -1,10 +1,6 @@
 import path from "node:path";
 
-import { execLintFile } from "./execLintFile";
-
-interface ExecError {
-  stdout: Buffer;
-}
+import { lintFile } from "./lintFile";
 
 export const testEsLintExample = (exampleName: string, matchString: string) => {
   const examplePath = path.join(__dirname, `../examples/${exampleName}`);
@@ -13,23 +9,29 @@ export const testEsLintExample = (exampleName: string, matchString: string) => {
 
   // eslint-disable-next-line jest/valid-title
   describe(exampleName, () => {
-    it("finishes with no errors when run on a good example", () => {
-      expect(() => {
-        execLintFile(goodExamplePath);
-      }).not.toThrow();
+    it("finishes with no errors when run on a good example", async () => {
+      const results = await lintFile(goodExamplePath);
+
+      expect(results).toHaveLength(1);
+
+      const result = results[0];
+
+      expect(result.errorCount).toEqual(0);
     });
 
-    it(`exits with an error containing "${matchString}" when run on a bad example`, () => {
-      try {
-        execLintFile(badExamplePath);
-      } catch (error: any) {
-        const execError = error as ExecError;
-        const stdout = execError.stdout.toString();
+    it(`exits with an error containing "${matchString}" when run on a bad example`, async () => {
+      const results = await lintFile(badExamplePath);
 
-        expect(stdout).toContain(matchString);
-      }
+      expect(results).toHaveLength(1);
 
-      expect.assertions(1);
+      const result = results[0];
+
+      expect(result.errorCount).toEqual(1);
+
+      const messages = result.messages;
+      const message = messages[0];
+
+      expect(message.message).toContain(matchString);
     });
   });
 };
