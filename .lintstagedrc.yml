@@ -1,3 +1,3 @@
-"*.(js|jsx|ts|tsx|yml|yaml|json)":
+"!(test/examples/**/*)*.(js|jsx|ts|tsx|yml|yaml|json)":
   - prettier --write
   - eslint --fix --quiet
