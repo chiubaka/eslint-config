@@ -1,8 +1,11 @@
 {
   "name": "@chiubaka/eslint-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "ESLint configs and plugins for the Chiubaka Technologies ecosystem.",
   "main": "dist/.eslintrc.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "clean": "rimraf -rf ./dist",
